@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'emails/index'
   root 'emails#index'
   devise_for :users
   root to: "emails#index"
