@@ -1,0 +1,5 @@
+// pour que puisse récupèrer l'id de l'objet du message
+<% email = params[:id] %>
+var mailChoosen = document.getElementById('body-' + <%= email %>);
+
+mailChoosen.innerHTML = "<%= j render 'email_body', email: @email %>"
