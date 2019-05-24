@@ -44,4 +44,11 @@ ActiveRecord::Schema.define(version: 2018_11_16_110124) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "emails", force: :cascade do |t|
+    t.string "object", 
+    t.text "body", 
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
